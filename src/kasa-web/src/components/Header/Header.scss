@@ -1,21 +1,45 @@
+@import "../../scss/variables";
+
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    height: 46px;
+    filter: $filter-main-color;
+
+    @media (min-width: $mb1) {
+      height: 55px;
+    }
+
+    @media (min-width: $mb2) {
+      height: 68px;
+    }
+  }
 
   &__list {
     list-style: none;
     display: flex;
-    column-gap: 57px;
+    column-gap: 26px;
   }
 
   &__link {
-    color: black;
-    font-size: 24px;
+    color: $black-color;
+    font-size: 12px;
     font-weight: 500;
     text-decoration: none;
 
     &_active {
       text-decoration: underline;
+    }
+
+    @media (min-width: $mb1) {
+      font-size: 16px;
+    }
+
+    @media (min-width: $mb2) {
+      font-size: 24px;
     }
   }
 }
