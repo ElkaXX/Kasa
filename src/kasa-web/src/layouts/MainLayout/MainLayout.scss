@@ -1,0 +1,14 @@
+.main-layout {
+  height: 100vh;
+  padding-top: 45px;
+  display: flex;
+  flex-direction: column;
+
+  &__content {
+    flex-grow: 1;
+  }
+
+  &__page {
+    margin: 50px 0;
+  }
+}

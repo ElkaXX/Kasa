@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    column-gap: 57px;
+  }
+
+  &__link {
+    color: black;
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: none;
+
+    &_active {
+      text-decoration: underline;
+    }
+  }
+}

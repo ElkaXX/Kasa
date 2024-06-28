@@ -1,15 +1,16 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import HomePage from "./pages/Home/HomePage";
-import AboutPage from "./pages/About/AboutPage";
-import NotFoundPage from "./pages/NotFound/NotFoundPage";
+import MainLayout from "./layouts/MainLayout/MainLayout";
+import routes from "./routes";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="*" element={<NotFoundPage />} />
+        <Route element={<MainLayout />}>
+          {routes.map((route) => (
+            <Route key={route.path} path={route.path} element={route.element} />
+          ))}
+        </Route>
       </Routes>
     </BrowserRouter>
   );
