@@ -1,0 +1,44 @@
+@import "../../scss/variables";
+
+.not-found {
+  padding: 113px 37px;
+  text-align: center;
+
+  @media (min-width: $mb3) {
+    padding: 139px 37px;
+  }
+
+  &__text {
+    color: $main-color;
+    font-size: 96px;
+    font-weight: 700;
+
+    @media (min-width: $mb3) {
+      font-size: 288px;
+    }
+  }
+
+  &__description {
+    margin-top: 113px;
+    color: $main-color;
+    font-size: 18px;
+    font-weight: 500;
+
+    @media (min-width: $mb3) {
+      margin-top: 139px;
+      font-size: 36px;
+    }
+  }
+
+  &__link {
+    display: block;
+    margin-top: 113px;
+    color: $black-color;
+    font-size: 14px;
+
+    @media (min-width: $mb3) {
+      margin-top: 139px;
+      font-size: 18px;
+    }
+  }
+}

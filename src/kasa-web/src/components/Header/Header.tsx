@@ -11,7 +11,7 @@ const Header = () => {
       <nav className="header__navigation">
         <ul className="header__list">
           {routes
-            .filter((route) => route.name)
+            .filter((route) => route.label)
             .map((route) => (
               <li key={route.path} className="header__item">
                 <NavLink
@@ -22,7 +22,7 @@ const Header = () => {
                   }
                   to={route.path}
                 >
-                  {route.name}
+                  {route.label}
                 </NavLink>
               </li>
             ))}

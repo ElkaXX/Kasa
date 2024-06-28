@@ -1,7 +1,7 @@
 @import "../../scss/variables";
 
 .footer {
-  height: 209px;
+  min-height: 209px;
   background-color: $black-color;
   color: $white-color;
   display: flex;
