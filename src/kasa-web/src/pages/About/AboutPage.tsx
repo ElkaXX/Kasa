@@ -5,7 +5,7 @@ import "./AboutPage.scss";
 const AboutPage = () => {
   return (
     <div className="about">
-      <Banner imageSrc="/src/assets/about-banner.jpeg" />
+      <Banner imageSrc="/src/assets/about-banner.jpeg" darkLevel={0.3}/>
 
       <div className="about__wrapper">
         <Expander className="about__expander" title="Fiabilité">
