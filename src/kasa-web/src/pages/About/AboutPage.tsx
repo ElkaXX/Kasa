@@ -1,29 +1,11 @@
+import Banner from "../../components/Banner/Banner";
 import Expander from "../../components/Expander/Expander";
 import "./AboutPage.scss";
-
-// const expandersData = [
-//   {
-//     title: "Fiabilité",
-//     content:
-//       ,
-//   },
-//   {
-//     title: "Respect",
-//   },
-//   {
-//     title: "Service",
-//   },
-//   {
-//     title: "Sécurité",
-//   },
-// ];
 
 const AboutPage = () => {
   return (
     <div className="about">
-      <div className="about__banner">
-        <div className="about__overlay"></div>
-      </div>
+      <Banner imageSrc="/src/assets/about-banner.jpeg" />
 
       <div className="about__wrapper">
         <Expander className="about__expander" title="Fiabilité">
