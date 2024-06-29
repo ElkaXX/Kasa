@@ -1,0 +1,64 @@
+@import "../../scss/variables";
+
+.expander {
+  &__header {
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 33px;
+    border-radius: 5px;
+    background-color: $main-color;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+
+    @media (min-width: $mb2) {
+      height: 52px;
+    }
+  }
+
+  &__arrow {
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    filter: $filter-white-color;
+    transition: all ease-in-out 0.1s;
+    transform: translateY(-50%) rotate(180deg);
+
+    &_expanded {
+      transform: translateY(-50%);
+    }
+  }
+
+  &__title {
+    color: $white-color;
+    font-size: 13px;
+    font-weight: 700;
+
+    @media (min-width: $mb2) {
+      font-size: 24px;
+    }
+  }
+
+  &__content {
+    margin: 0;
+    padding: 0;
+    height: 0;
+    color: $black-color;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility ease-in 0.1s, opacity ease-in 0.1s;
+
+    &_expanded {
+      height: auto;
+      padding: 20px;
+      padding-top: 16px;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
