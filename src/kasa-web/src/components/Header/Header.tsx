@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import classes from "classnames";
 import routes from "../../routes";
 import logo from "../../assets/LOGO.svg";
 import "./Header.scss";
@@ -16,9 +17,10 @@ const Header = () => {
               <li key={route.path} className="header__item">
                 <NavLink
                   className={({ isActive }) =>
-                    isActive
-                      ? "header__link header__link_active"
-                      : "header__link"
+                    classes({
+                      header__link: true,
+                      header__link_active: isActive,
+                    })
                   }
                   to={route.path}
                 >

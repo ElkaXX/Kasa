@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import arrow from "../../assets/arrow.svg";
+import classes from "classnames";
 import "./Expander.scss";
 
 type Props = {
@@ -11,30 +12,24 @@ type Props = {
 const Expander = ({ title, className, children }: Props) => {
   const [expanded, setExpanded] = useState<boolean>(false);
 
+  const arrowClass = classes({
+    expander__arrow: true,
+    expander__arrow_expanded: expanded,
+  });
+
+  const contentClass = classes({
+    expander__content: true,
+    expander__content_expanded: expanded,
+  });
+
   return (
     <div className={"expander " + className}>
       <div className="expander__header" onClick={() => setExpanded(!expanded)}>
         <div className="expander__title">{title}</div>
-        <img
-          src={arrow}
-          alt="arrow"
-          className={
-            expanded
-              ? "expander__arrow expander__arrow_expanded"
-              : "expander__arrow"
-          }
-        />
+        <img src={arrow} alt="arrow" className={arrowClass} />
       </div>
 
-      <div
-        className={
-          expanded
-            ? "expander__content expander__content_expanded"
-            : "expander__content"
-        }
-      >
-        {children}
-      </div>
+      <div className={contentClass}>{children}</div>
     </div>
   );
 };
