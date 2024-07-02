@@ -1,28 +1,35 @@
 import AboutPage from "./pages/About/AboutPage";
+import ApartmentPage from "./pages/Apartment/ApartmentPage";
 import HomePage from "./pages/Home/HomePage";
 import NotFoundPage from "./pages/NotFound/NotFoundPage";
 
-export enum RouteName {
-  HOME = "home",
-  ABOUT = "about",
-  NOT_FOUND = "not-found",
+export enum RoutePath {
+  HOME = "/",
+  ABOUT = "/about",
+  NOT_FOUND = "/not-found",
+  APARTMENT = "/apartment/:id",
 }
 
 const routes = [
   {
-    name: RouteName.HOME,
-    path: "/",
+    path: RoutePath.HOME,
     label: "Accueil",
     element: <HomePage />,
   },
   {
-    name: RouteName.ABOUT,
-    path: "/about",
+    path: RoutePath.ABOUT,
     label: "A Propos",
     element: <AboutPage />,
   },
   {
-    name: RouteName.NOT_FOUND,
+    path: RoutePath.APARTMENT,
+    element: <ApartmentPage />,
+  },
+  {
+    path: RoutePath.NOT_FOUND,
+    element: <NotFoundPage />,
+  },
+  {
     path: "*",
     element: <NotFoundPage />,
   },

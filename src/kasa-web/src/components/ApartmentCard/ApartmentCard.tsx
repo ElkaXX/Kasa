@@ -9,7 +9,14 @@ type Props = {
 const ApartmentCard = ({ title, location, cover }: Props) => {
   return (
     <div className="apartment-card">
-      <img src={cover} alt="cover" className="apartment-card__cover" />
+      {cover ? (
+        <img src={cover} alt="cover" className="apartment-card__cover" />
+      ) : null}
+
+      <div className="apartment-card__description">
+        <div className="apartment-card__title">{title}</div>
+        <div className="apartment-card__location">{location}</div>
+      </div>
     </div>
   );
 };

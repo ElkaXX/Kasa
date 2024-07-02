@@ -1,4 +1,4 @@
-import axios, { AxiosInstance } from "axios";
+import axios, { AxiosInstance, HttpStatusCode } from "axios";
 import { Apartment } from "./types";
 
 class ApiClient {
@@ -11,12 +11,20 @@ class ApiClient {
   }
 
   public async getApartmentsAsync(): Promise<Apartment[]> {
-    const response = await this.client.get<Apartment[]>("/apartments");
-    return response.data;
+    return await this.sendGetAsync<Apartment[]>("/apartments");
   }
 
   public async getApartmentAsync(id: string): Promise<Apartment> {
-    const response = await this.client.get<Apartment>(`/apartments/${id}`);
+    return await this.sendGetAsync<Apartment>(`/apartments/${id}`);
+  }
+
+  private async sendGetAsync<T>(route: string) {
+    const response = await this.client.get<T>(route);
+
+    if (response.status != HttpStatusCode.Ok) {
+      throw new Error(`Failed request with status: ${response.statusText}`);
+    }
+
     return response.data;
   }
 }

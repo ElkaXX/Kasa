@@ -20,7 +20,7 @@ const HomePage = () => {
         text="Chez vous, partout et ailleurs"
       />
 
-      {apartments.length ? <ApartmentList classNames="home__list" apartments={apartments} /> : null}
+      {apartments.length ? <ApartmentList className="home__list" apartments={apartments} /> : null}
     </div>
   );
 };

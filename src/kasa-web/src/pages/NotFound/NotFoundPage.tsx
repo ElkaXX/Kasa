@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import routes, { RouteName } from "../../routes";
+import { RoutePath } from "../../routes";
 import "./NotFountPage.scss";
 
 const NotFoundPage = () => {
@@ -9,10 +9,7 @@ const NotFoundPage = () => {
       <div className="not-found__description">
         Oups! La page que vous demandez n'existe pas.
       </div>
-      <NavLink
-        className="not-found__link"
-        to={routes.find((route) => route.name == RouteName.HOME)!.path}
-      >
+      <NavLink className="not-found__link" to={RoutePath.HOME}>
         Retourner sur la page d’accueil
       </NavLink>
     </div>

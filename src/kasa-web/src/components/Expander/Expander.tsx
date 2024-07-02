@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import arrow from "../../assets/arrow.svg";
-import classes from "classnames";
+import classnames from "classnames";
 import "./Expander.scss";
 
 type Props = {
@@ -12,12 +12,12 @@ type Props = {
 const Expander = ({ title, className, children }: Props) => {
   const [expanded, setExpanded] = useState<boolean>(false);
 
-  const arrowClass = classes({
+  const arrowClass = classnames({
     expander__arrow: true,
     expander__arrow_expanded: expanded,
   });
 
-  const contentClass = classes({
+  const contentClass = classnames({
     expander__content: true,
     expander__content_expanded: expanded,
   });

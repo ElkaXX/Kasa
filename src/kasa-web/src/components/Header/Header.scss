@@ -7,7 +7,6 @@
 
   &__logo {
     height: 46px;
-    filter: $filter-main-color;
 
     @media (min-width: $mb1) {
       height: 55px;
@@ -16,6 +15,10 @@
     @media (min-width: $mb2) {
       height: 68px;
     }
+  }
+
+  &__img {
+    filter: $filter-main-color;
   }
 
   &__list {
