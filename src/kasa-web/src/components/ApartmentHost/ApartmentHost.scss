@@ -1,0 +1,23 @@
+@import "../../scss/variables";
+
+.apartment-host {
+  width: 167px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 10px;
+
+  &__name {
+    text-align: right;
+    color: $main-color;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  &__picture {
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}

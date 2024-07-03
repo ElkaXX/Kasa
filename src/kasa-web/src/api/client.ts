@@ -1,31 +1,28 @@
-import axios, { AxiosInstance, HttpStatusCode } from "axios";
 import { Apartment } from "./types";
 
 class ApiClient {
-  private readonly client: AxiosInstance;
+  private readonly baseUrl: string;
 
   constructor() {
-    this.client = axios.create({
-      baseURL: import.meta.env.VITE_BASE_URL,
-    });
+    this.baseUrl = import.meta.env.VITE_BASE_URL;
   }
 
   public async getApartmentsAsync(): Promise<Apartment[]> {
-    return await this.sendGetAsync<Apartment[]>("/apartments");
+    return await this.sendGetAsync<Apartment[]>("apartments");
   }
 
   public async getApartmentAsync(id: string): Promise<Apartment> {
-    return await this.sendGetAsync<Apartment>(`/apartments/${id}`);
+    return await this.sendGetAsync<Apartment>(`apartments/${id}`);
   }
 
   private async sendGetAsync<T>(route: string) {
-    const response = await this.client.get<T>(route);
+    const response = await fetch(`${this.baseUrl}/${route}`, { method: "GET" });
 
-    if (response.status != HttpStatusCode.Ok) {
+    if (!response.ok) {
       throw new Error(`Failed request with status: ${response.statusText}`);
     }
 
-    return response.data;
+    return response.json() as Promise<T>;
   }
 }
 

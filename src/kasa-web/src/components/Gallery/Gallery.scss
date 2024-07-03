@@ -1,0 +1,42 @@
+@import "../../scss/variables";
+
+.gallery {
+  position: relative;
+  height: 255px;
+  border-radius: 10px;
+
+  @media (min-width: $mb3) {
+    height: 415px;
+  }
+
+  &__picture {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+
+  &__button {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &_left {
+      left: 0;
+    }
+
+    &_right {
+      right: 0;
+    }
+
+    @media (min-width: $mb3) {
+      width: 46px;
+      height: 80px;
+    }
+  }
+}

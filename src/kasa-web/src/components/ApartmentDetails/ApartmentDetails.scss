@@ -1,0 +1,15 @@
+@import "../../scss/variables";
+
+.apartment-details {
+  font-weight: 500;
+
+  &__title {
+    color: $main-color;
+    font-size: 18px;
+  }
+
+  &__location {
+    color: $black-color;
+    font-size: 14px;
+  }
+}

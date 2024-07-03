@@ -1,0 +1,9 @@
+@import "../../scss/variables";
+
+.apartment {
+  padding: 27px 0;
+
+  @media (min-width: $mb3) {
+    padding: 50px 0;
+  }
+}

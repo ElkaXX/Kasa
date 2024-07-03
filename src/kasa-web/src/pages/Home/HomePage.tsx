@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import { Apartment } from "../../api/types";
-import ApiClient from "../../api/client";
 import Banner from "../../components/Banner/Banner";
 import ApartmentList from "../../components/ApartmentList/ApartmentList";
 import "./HomePage.scss";
+import client from "../../api/client";
 
 const HomePage = () => {
   const [apartments, setApartments] = useState<Apartment[]>([]);
 
   useEffect(() => {
-    ApiClient.getApartmentsAsync().then((data) => setApartments(data));
+    client.getApartmentsAsync().then((data) => setApartments(data));
   }, []);
 
   return (
@@ -20,7 +20,9 @@ const HomePage = () => {
         text="Chez vous, partout et ailleurs"
       />
 
-      {apartments.length ? <ApartmentList className="home__list" apartments={apartments} /> : null}
+      {apartments.length ? (
+        <ApartmentList className="home__list" apartments={apartments} />
+      ) : null}
     </div>
   );
 };

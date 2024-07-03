@@ -1,0 +1,22 @@
+@import "../../scss/variables";
+
+.tag-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  &__item {
+    padding: 2px 10px;
+    min-width: 84px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: $main-color;
+    color: $white-color;
+    font-size: 10px;
+    font-weight: 700;
+  }
+}

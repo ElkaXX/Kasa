@@ -1,0 +1,7 @@
+@import "../../scss/variables";
+
+.rating {
+  &__img {
+    filter: $filter-main-color;
+  }
+}
