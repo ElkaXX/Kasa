@@ -7,7 +7,7 @@ export enum RoutePath {
   HOME = "/",
   ABOUT = "/about",
   NOT_FOUND = "/not-found",
-  APARTMENT = "/apartment/:id",
+  APARTMENT = "/apartments/:id",
 }
 
 const routes = [

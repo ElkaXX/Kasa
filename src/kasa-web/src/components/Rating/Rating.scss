@@ -1,7 +1,27 @@
 @import "../../scss/variables";
 
 .rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  @media (min-width: $mb3) {
+    gap: 10px;
+  }
+
   &__img {
-    filter: $filter-main-color;
+    width: 14px;
+    height: 14px;
+    filter: $filter-gray-color;
+
+    @media (min-width: $mb3) {
+      width: 32px;
+      height: 32px;
+    }
+
+    &_active {
+      filter: $filter-main-color;
+    }
   }
 }

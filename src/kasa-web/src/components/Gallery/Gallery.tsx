@@ -35,26 +35,30 @@ const Gallery = ({ pictures }: Props) => {
   return (
     <div className="gallery">
       <img src={picture} alt="picture" className="gallery__picture" />
-      <button
-        className="gallery__button gallery__button_left"
-        onClick={movePrevious}
-      >
-        <img
-          src={backwardArrow}
-          alt="backward arrow"
-          className="gallery__arrow"
-        />
-      </button>
-      <button
-        className="gallery__button gallery__button_right"
-        onClick={moveNext}
-      >
-        <img
-          src={forwardArrow}
-          alt="forward arrow"
-          className="gallery__arrow"
-        />
-      </button>
+      {pictures.length > 1 ? (
+        <button
+          className="gallery__button gallery__button_left"
+          onClick={movePrevious}
+        >
+          <img
+            src={backwardArrow}
+            alt="backward arrow"
+            className="gallery__arrow"
+          />
+        </button>
+      ) : null}
+      {pictures.length > 1 ? (
+        <button
+          className="gallery__button gallery__button_right"
+          onClick={moveNext}
+        >
+          <img
+            src={forwardArrow}
+            alt="forward arrow"
+            className="gallery__arrow"
+          />
+        </button>
+      ) : null}
     </div>
   );
 };

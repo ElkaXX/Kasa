@@ -3,7 +3,6 @@
 .tag-list {
   list-style: none;
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 10px;
 
@@ -18,5 +17,10 @@
     color: $white-color;
     font-size: 10px;
     font-weight: 700;
+
+    @media (min-width: $mb3) {
+      min-width: 115px;
+      font-size: 14px;
+    }
   }
 }

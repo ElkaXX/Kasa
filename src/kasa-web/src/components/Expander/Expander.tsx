@@ -23,7 +23,7 @@ const Expander = ({ title, className, children }: Props) => {
   });
 
   return (
-    <div className={"expander " + className}>
+    <div className={classnames("expander", className)}>
       <div className="expander__header" onClick={() => setExpanded(!expanded)}>
         <div className="expander__title">{title}</div>
         <img src={arrow} alt="arrow" className={arrowClass} />

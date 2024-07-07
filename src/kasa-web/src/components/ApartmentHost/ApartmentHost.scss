@@ -1,23 +1,32 @@
 @import "../../scss/variables";
 
 .apartment-host {
-  width: 167px;
+  width: 93px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
   column-gap: 10px;
 
   &__name {
     text-align: right;
     color: $main-color;
-    font-size: 18px;
+    font-size: 12px;
     font-weight: 500;
+
+    @media (min-width: $mb3) {
+      font-size: 18px;
+    }
   }
 
   &__picture {
-    height: 64px;
-    width: 64px;
+    height: 32px;
+    width: 32px;
     border-radius: 50%;
     object-fit: cover;
+
+    @media (min-width: $mb3) {
+      height: 64px;
+      width: 64px;
+    }
   }
 }

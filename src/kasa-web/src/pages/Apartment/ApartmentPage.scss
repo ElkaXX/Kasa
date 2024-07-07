@@ -6,4 +6,69 @@
   @media (min-width: $mb3) {
     padding: 50px 0;
   }
+
+  &__content {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $mb3) {
+      margin-top: 30px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  &__first {
+    text-align: left;
+  }
+
+  &__second {
+    margin-top: 17px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: $mb3) {
+      margin-top: 0;
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      align-items: flex-end;
+      gap: 21px;
+    }
+  }
+
+  &__third {
+    margin-top: 23px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+
+    @media (min-width: $mb3) {
+      flex-direction: row;
+      align-items: flex-start;
+      column-gap: 70px;
+    }
+  }
+
+  &__tag-list {
+    margin-top: 10px;
+
+    @media (min-width: $mb3) {
+      margin-top: 20px;
+    }
+  }
+
+  &__expander {
+    width: 100%;
+  }
+
+  &__equipments, &__description {
+    list-style: none;
+    font-size: 12px;
+
+    @media (min-width: $mb3) {
+      font-size: 18px;
+    }
+  }
 }

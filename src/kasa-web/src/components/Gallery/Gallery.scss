@@ -35,8 +35,13 @@
     }
 
     @media (min-width: $mb3) {
-      width: 46px;
+      width: 80px;
       height: 80px;
     }
+  }
+
+  &__arrow {
+    width: inherit;
+    height: inherit;
   }
 }
