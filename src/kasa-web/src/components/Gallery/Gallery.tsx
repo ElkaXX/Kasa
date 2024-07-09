@@ -31,10 +31,13 @@ const Gallery = ({ pictures }: Props) => {
   };
 
   const picture = pictures[pictureIndex];
+  const currentIndex = pictureIndex + 1;
+  const totalPictures = pictures.length;
 
   return (
     <div className="gallery">
       <img src={picture} alt="picture" className="gallery__picture" />
+      <div className="gallery__counter">{`${currentIndex}/${totalPictures}`}</div>
       {pictures.length > 1 ? (
         <button
           className="gallery__button gallery__button_left"

@@ -16,6 +16,22 @@
     border-radius: inherit;
   }
 
+  &__counter {
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    bottom: 25px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    display: none;
+
+    @media (min-width: $mb3) {
+      display: block;
+    }
+  }
+   
+
   &__button {
     position: absolute;
     height: 24px;
