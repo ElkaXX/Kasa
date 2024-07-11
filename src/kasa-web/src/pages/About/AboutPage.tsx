@@ -10,37 +10,31 @@ const AboutPage = () => {
       <div className="about__wrapper">
         <Expander className="about__expander" title="Fiabilité">
           <div>
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum
-            atque, eos deleniti laboriosam quis id omnis expedita dolore et?
-            Deserunt aperiam beatae eveniet tenetur error quod magni voluptates
-            saepe accusamus."
+            Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, 
+            et toutes les informations sont régulièrement vérifiées par nos équipes.
           </div>
         </Expander>
 
         <Expander className="about__expander" title="Respect">
           <div>
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum
-            atque, eos deleniti laboriosam quis id omnis expedita dolore et?
-            Deserunt aperiam beatae eveniet tenetur error quod magni voluptates
-            saepe accusamus."
+            La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou
+             de perturbation du voisinage entraînera une exclusion de notre plateforme.
           </div>
         </Expander>
 
         <Expander className="about__expander" title="Service">
           <div>
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum
-            atque, eos deleniti laboriosam quis id omnis expedita dolore et?
-            Deserunt aperiam beatae eveniet tenetur error quod magni voluptates
-            saepe accusamus."
+            Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. 
+            N'hésitez pas à nous contacter si vous avez la moindre question.
           </div>
         </Expander>
 
         <Expander className="about__expander" title="Sécurité">
           <div>
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum
-            atque, eos deleniti laboriosam quis id omnis expedita dolore et?
-            Deserunt aperiam beatae eveniet tenetur error quod magni voluptates
-            saepe accusamus."
+            La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement 
+            correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, 
+            cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur
+            la sécurité domestique pour nos hôtes.
           </div>
         </Expander>
       </div>
