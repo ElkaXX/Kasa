@@ -23,7 +23,7 @@ const Gallery = ({ pictures }: Props) => {
   const moveNext = () => {
     const nextIndex = pictureIndex + 1;
 
-    if (nextIndex == pictures.length) {
+    if (nextIndex === pictures.length) {
       setPictureIndex(0);
     } else {
       setPictureIndex(nextIndex);
@@ -37,31 +37,33 @@ const Gallery = ({ pictures }: Props) => {
   return (
     <div className="gallery">
       <img src={picture} alt="picture" className="gallery__picture" />
-      <div className="gallery__counter">{`${currentIndex}/${totalPictures}`}</div>
-      {pictures.length > 1 ? (
-        <button
-          className="gallery__button gallery__button_left"
-          onClick={movePrevious}
-        >
-          <img
-            src={backwardArrow}
-            alt="backward arrow"
-            className="gallery__arrow"
-          />
-        </button>
-      ) : null}
-      {pictures.length > 1 ? (
-        <button
-          className="gallery__button gallery__button_right"
-          onClick={moveNext}
-        >
-          <img
-            src={forwardArrow}
-            alt="forward arrow"
-            className="gallery__arrow"
-          />
-        </button>
-      ) : null}
+      {pictures.length > 1 && (
+        <div className="gallery__counter">{`${currentIndex}/${totalPictures}`}</div>
+      )}
+      {pictures.length > 1 && (
+        <>
+          <button
+            className="gallery__button gallery__button_left"
+            onClick={movePrevious}
+          >
+            <img
+              src={backwardArrow}
+              alt="backward arrow"
+              className="gallery__arrow"
+            />
+          </button>
+          <button
+            className="gallery__button gallery__button_right"
+            onClick={moveNext}
+          >
+            <img
+              src={forwardArrow}
+              alt="forward arrow"
+              className="gallery__arrow"
+            />
+          </button>
+        </>
+      )}
     </div>
   );
 };
