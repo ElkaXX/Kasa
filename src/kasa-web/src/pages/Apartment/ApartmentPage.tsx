@@ -10,6 +10,7 @@ import ApartmentHost from "../../components/ApartmentHost/ApartmentHost";
 import TagList from "../../components/TagList/TagList";
 import Rating from "../../components/Rating/Rating";
 import Expander from "../../components/Expander/Expander";
+import NotFoundPage from "../NotFound/NotFoundPage";
 
 const ApartmentPage = () => {
   const [apartment, setApartment] = useState<Apartment | null>(null);
@@ -32,7 +33,7 @@ const ApartmentPage = () => {
   }, [id, navigate]);
 
   if (!apartment) {
-    return "Loading...";
+    return (<><NotFoundPage/></>);
   }
 
   return (
